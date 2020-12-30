@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "invest-web"
+    }
+  },
+  "defaultProject": "invest-web",
+  "cli": {
+    "analytics": false
+  }
 }
