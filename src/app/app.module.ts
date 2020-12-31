@@ -15,7 +15,6 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatCommonModule, MatOptionModule} from '@angular/material/core';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
@@ -23,7 +22,6 @@ import {MatListModule} from '@angular/material/list';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatPaginatorModule} from '@angular/material/paginator';
-import {MatTableModule} from '@angular/material/table';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatExpansionModule} from '@angular/material/expansion';
@@ -49,7 +47,7 @@ import {FroalaEditorModule, FroalaViewModule} from 'angular-froala-wysiwyg';
     MatAutocompleteModule,
     MatCommonModule,
     MatCheckboxModule,
-    MatRadioModule,
+    // MatRadioModule,
     MatSelectModule,
     MatOptionModule,
     MatInputModule,
@@ -58,7 +56,7 @@ import {FroalaEditorModule, FroalaViewModule} from 'angular-froala-wysiwyg';
     MatDividerModule,
     MatTabsModule,
     MatPaginatorModule,
-    MatTableModule,
+    // MatTableModule,
     MatDialogModule,
     MatProgressSpinnerModule,
     MatExpansionModule,
