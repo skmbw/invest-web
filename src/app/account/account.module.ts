@@ -6,6 +6,9 @@ import {AccountSummaryComponent} from './account-summary/account-summary.compone
 
 @NgModule({
   declarations: [AccountDetailComponent, AccountSummaryComponent],
+  exports: [
+    AccountSummaryComponent
+  ],
   imports: [
     CommonModule
   ]

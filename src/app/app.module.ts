@@ -26,6 +26,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {FroalaEditorModule, FroalaViewModule} from 'angular-froala-wysiwyg';
+import {AccountModule} from './account/account.module';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import {FroalaEditorModule, FroalaViewModule} from 'angular-froala-wysiwyg';
     FroalaViewModule.forRoot(),
     // 如果不在这里配置，chrome会提示脏检查错误
     ToastrModule.forRoot({timeOut: 3000, positionClass: 'toast-center-center'}),
+    AccountModule,
 
   ],
   providers: [],
