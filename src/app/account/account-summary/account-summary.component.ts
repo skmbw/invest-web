@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {AccountService} from '../../service/account.service';
+import {ToastrService} from 'ngx-toastr';
 
 @Component({
   selector: 'app-account-summary',
@@ -7,7 +9,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class AccountSummaryComponent implements OnInit {
 
-  constructor() { }
+  constructor(private accountService: AccountService, private toastr: ToastrService) { }
 
   ngOnInit(): void {
   }

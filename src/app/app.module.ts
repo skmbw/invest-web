@@ -7,6 +7,7 @@ import {DashboardModule} from './dashboard/dashboard.module';
 import {InvestModule} from './invest/invest.module';
 import {StockModule} from './stock/stock.module';
 import {RoutingModule} from './routing/routing.module';
+import {ToastrModule} from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {RoutingModule} from './routing/routing.module';
     DashboardModule,
     InvestModule,
     StockModule,
-    RoutingModule
+    RoutingModule,
+    ToastrModule.forRoot({timeOut: 3000, positionClass: 'toast-center-center'}),
   ],
   providers: [],
   bootstrap: [AppComponent]
