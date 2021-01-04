@@ -1,3 +1,6 @@
+/**
+ * 账户 bean
+ */
 export class Account {
   id: string;
   name: string;
