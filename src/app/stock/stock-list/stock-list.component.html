@@ -1,6 +1,11 @@
 <mat-list>
-  <mat-list-item *ngFor="let stock of stockList">{{stock.name}}</mat-list-item>
+  <mat-list-item *ngFor="let stock of stockList">
+    <p>{{stock.name}} {{stock.code}}</p>
+    <p matline>市值：{{stock.marketValue}}</p>
+    <button class="btn btn-outline-danger" (click)="evaluateBuying(stock)">买入评估</button>
+    <button class="btn btn-outline-success ml-2" (click)="evaluateSellout(stock)">卖出评估</button>
+  </mat-list-item>
 </mat-list>
 <mat-selection-list>
-  <mat-list-option *ngFor="let stock of stockList">{{stock.name}}</mat-list-option>
+  <mat-list-option *ngFor="let stock of stockList">{{stock.name}} {{stock.code}}</mat-list-option>
 </mat-selection-list>

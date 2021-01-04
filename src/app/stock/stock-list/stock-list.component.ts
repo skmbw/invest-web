@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {StockService} from '../../service/stock.service';
 import {Stock} from '../../bean/stock';
+import {InvestService} from '../../service/invest.service';
 
 @Component({
   selector: 'app-stock-list',
@@ -10,7 +11,7 @@ import {Stock} from '../../bean/stock';
 export class StockListComponent implements OnInit {
   stockList: Stock[] = [];
 
-  constructor(private stockService: StockService) {
+  constructor(private stockService: StockService, private investService: InvestService) {
   }
 
   ngOnInit(): void {
@@ -19,4 +20,11 @@ export class StockListComponent implements OnInit {
     });
   }
 
+  evaluateBuying(stock: Stock) {
+    this.investService.evaluateBuying(stock).subscribe(result => {});
+  }
+
+  evaluateSellout(stock: Stock) {
+    this.investService.evaluateSellout(stock).subscribe(result => {});
+  }
 }
