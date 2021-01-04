@@ -13,6 +13,6 @@ export class AccountService {
   }
 
   list(): Observable<JsonBean> {
-    return this.httpClient.post<JsonBean>(environment.host + '/stockAccount/list', {name: '尹雷'});
+    return this.httpClient.post<JsonBean>(environment.host + 'stockAccount/list', {name: '尹雷'});
   }
 }

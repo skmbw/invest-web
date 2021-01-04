@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {StockService} from '../../service/stock.service';
+import {Stock} from '../../bean/stock';
 
 @Component({
   selector: 'app-stock-list',
@@ -6,10 +8,15 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./stock-list.component.css']
 })
 export class StockListComponent implements OnInit {
+  stockList: Stock[] = [];
 
-  constructor() { }
+  constructor(private stockService: StockService) {
+  }
 
   ngOnInit(): void {
+    this.stockService.list().subscribe(result => {
+      this.stockList = result.data as Stock[];
+    });
   }
 
 }
