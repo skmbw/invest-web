@@ -5,4 +5,5 @@ export class EvaluationResult {
   name: string;
   evaluationDate: string;
   ruleResultList: MatchRuleBean[];
+  type: string;
 }
