@@ -1,3 +1,6 @@
 <mat-list>
   <mat-list-item *ngFor="let stock of stockList">{{stock.name}}</mat-list-item>
 </mat-list>
+<mat-selection-list>
+  <mat-list-option *ngFor="let stock of stockList">{{stock.name}}</mat-list-option>
+</mat-selection-list>
