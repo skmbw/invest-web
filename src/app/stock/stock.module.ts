@@ -4,9 +4,12 @@ import {StockListComponent} from './stock-list/stock-list.component';
 
 
 @NgModule({
-  declarations: [StockListComponent],
-  imports: [
-    CommonModule
-  ]
+    declarations: [StockListComponent],
+    exports: [
+        StockListComponent
+    ],
+    imports: [
+        CommonModule
+    ]
 })
 export class StockModule { }

@@ -5,9 +5,12 @@ import {ClearanceListComponent} from './clearance-list/clearance-list.component'
 
 
 @NgModule({
-  declarations: [HoldingListComponent, ClearanceListComponent],
-  imports: [
-    CommonModule
-  ]
+    declarations: [HoldingListComponent, ClearanceListComponent],
+    exports: [
+        HoldingListComponent
+    ],
+    imports: [
+        CommonModule
+    ]
 })
 export class InvestModule { }
