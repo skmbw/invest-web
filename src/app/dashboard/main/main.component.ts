@@ -11,7 +11,7 @@ import {Account} from '../../bean/account';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-  account: Account;
+  account: Account = new Account(); // 如果这里不赋值，在html初始化时，会为null，那么报错
 
   constructor(private investService: InvestService, private stockService: StockService,
               private accountService: AccountService, private toastr: ToastrService) {
