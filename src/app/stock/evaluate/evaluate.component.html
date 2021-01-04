@@ -1,6 +1,6 @@
 <h2 class="text-center"><span *ngIf="data.type === 'sellout'">卖出</span><span *ngIf="data.type === 'buying'">买入</span>评估</h2>
+<mat-divider></mat-divider>
 <div class="row col-12">
-  <mat-divider></mat-divider>
   <div class="row col-12 mt-2" *ngFor="let ruleBean of data.ruleResultList; let idx = index;">
     <div class="col-10">{{ruleBean.rulerDescription}}</div>
     <div class="col-2">

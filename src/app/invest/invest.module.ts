@@ -7,7 +7,8 @@ import {ClearanceListComponent} from './clearance-list/clearance-list.component'
 @NgModule({
     declarations: [HoldingListComponent, ClearanceListComponent],
     exports: [
-        HoldingListComponent
+        HoldingListComponent,
+        ClearanceListComponent
     ],
     imports: [
         CommonModule
