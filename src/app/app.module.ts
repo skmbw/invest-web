@@ -27,6 +27,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {FroalaEditorModule, FroalaViewModule} from 'angular-froala-wysiwyg';
 import {AccountModule} from './account/account.module';
+import {HttpClientModule} from '@angular/common/http';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -66,7 +68,8 @@ import {AccountModule} from './account/account.module';
     // 如果不在这里配置，chrome会提示脏检查错误
     ToastrModule.forRoot({timeOut: 3000, positionClass: 'toast-center-center'}),
     AccountModule,
-
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
