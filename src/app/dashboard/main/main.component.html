@@ -1,6 +1,13 @@
 <div class="container col-12">
   <div class="row">
-    dashboard
+    <div class="row col-12">
+      <div>账户名： {{account.name}}</div>
+      <div>资金： {{account.capital}}</div>
+    </div>
+    <div class="row col-12">
+      <div>资产净值： {{account.totalAmount}}</div>
+      <div>盈利： {{account.profit}}</div>
+    </div>
   </div>
   <div class="row col-12">
     <mat-tab-group>
