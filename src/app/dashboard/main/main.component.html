@@ -1,13 +1,47 @@
-<div class="container col-12">
-  <div class="row">
-    <div class="row col-12">
-      <div>账户名： {{account.name}}</div>
-      <div>资金： {{account.capital}}</div>
-    </div>
-    <div class="row col-12">
-      <div>资产净值： {{account.totalAmount}}</div>
-      <div>盈利： {{account.profit}}</div>
-    </div>
+<div class="container">
+  <div class="row col-12">
+    <mat-card class="col-12">
+      <mat-card-content class="mt-3">
+        <div class="row mb-2">
+          <div class="col-md-4">
+            <b class="font-size-lg">账户名：</b>
+            <span class="primary-color"> {{account.name}}</span>
+          </div>
+          <div class="col-md-4">
+            <b class="font-size-lg">转入资金：</b>
+            <span class="primary-color"> {{account.capitalTransferIn}}</span>
+          </div>
+          <div class="col-md-4">
+            <b class="font-size-lg">转出资金：</b>
+            <span class="primary-color">{{account.capitalTransferOut}}</span>
+          </div>
+        </div>
+        <div class="row mb-2">
+          <div class="col-md-4">
+            <b class="font-size-lg">资金总额：</b>
+            <span class="primary-color">{{account.capital}}</span>
+          </div>
+          <div class="col-md-4">
+            <b class="font-size-lg">盈利：</b>
+            <span class="primary-color">{{account.profit}}</span>
+          </div>
+          <div class="col-md-4">
+            <b class="font-size-lg">资产净值：</b>
+            <span class="primary-color">{{account.totalAmount}}</span>
+          </div>
+        </div>
+        <div class="row mb-2">
+          <div class="col-md-4">
+            <b class="font-size-lg">现金总额：</b>
+            <span class="primary-color">{{account.capital}}</span>
+          </div>
+          <div class="col-md-4">
+            <b class="font-size-lg">股票净值：</b>
+            <span class="primary-color">{{account.profit}}</span>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
   </div>
   <div class="row col-12">
     <mat-tab-group>
