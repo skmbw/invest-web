@@ -30,9 +30,10 @@ export class StockListComponent implements OnInit {
       if (result.code === 1) {
         const evaluationResult = result.data as EvaluationResult;
         evaluationResult.type = 'buying';
+        evaluationResult.name = stock.name;
         this.dialog.open(EvaluateComponent, {
           width: '650px',
-          height: '500px',
+          height: '550px',
           data: evaluationResult
         });
       } else {
@@ -46,9 +47,10 @@ export class StockListComponent implements OnInit {
       if (result.code === 1) {
         const evaluationResult = result.data as EvaluationResult;
         evaluationResult.type = 'sellout';
+        evaluationResult.name = stock.name;
         this.dialog.open(EvaluateComponent, {
           width: '650px',
-          height: '500px',
+          height: '550px',
           data: evaluationResult
         });
       } else {

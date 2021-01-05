@@ -1,15 +1,18 @@
-<h2 class="text-center"><span *ngIf="data.type === 'sellout'">卖出</span><span *ngIf="data.type === 'buying'">买入</span>评估</h2>
-<mat-divider></mat-divider>
-<div class="row col-12">
-  <div class="row col-12 mt-2" *ngFor="let ruleBean of data.ruleResultList; let idx = index;">
-    <div class="col-10">
-      <span *ngIf="ruleBean.strict === true" class="red">严格</span> {{ruleBean.rulerDescription}}
+<div class="container">
+  <h2 class="text-center">{{data.name}}<span *ngIf="data.type === 'sellout'">卖出</span><span *ngIf="data.type === 'buying'">买入</span>评估</h2>
+  <div class="row col-12 mt-3">
+    <div class="row col-12 mt-3" *ngFor="let ruleBean of data.ruleResultList; let idx = index;">
+      <div class="col-10">
+        <span *ngIf="ruleBean.strict === true" class="red">严格</span> {{ruleBean.rulerDescription}}
+      </div>
+      <div class="col-2">
+        <span class="green" *ngIf="ruleBean.result === 'PASS'">通过</span>
+        <span class="red" *ngIf="ruleBean.result === 'NOT_PASS'">未通过</span>
+      </div>
+      <!--mat-divider不显示，是因为没有设置长度。-->
+      <mat-divider class="col-12 mt-3" *ngIf="idx !== data.ruleResultList.length - 1"></mat-divider>
     </div>
-    <div class="col-2">
-      <span class="green" *ngIf="ruleBean.result === 'PASS'">通过</span>
-      <span class="red" *ngIf="ruleBean.result === 'NOT_PASS'">未通过</span>
-    </div>
-    <!--mat-divider不显示，是因为没有设置长度。-->
-    <mat-divider class="col-12" *ngIf="idx !== data.ruleResultList.length - 1"></mat-divider>
   </div>
+
+  <button type="button" mat-dialog-close class="col-md-2 col-sm-12 btn btn-outline-danger mt-4 offset-lg-5 offset-md-5">确 定</button>
 </div>
