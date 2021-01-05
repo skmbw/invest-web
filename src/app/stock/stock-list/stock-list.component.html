@@ -1,14 +1,13 @@
-<div class="container">
-  <mat-list>
-    <mat-list-item *ngFor="let stock of stockList">
-      <p class="mt-3"><span class="font-weight-bold">{{stock.name}}</span> {{stock.code}}
-        涨幅：<span *ngIf="stock.increaseRate > 0" class="red">{{stock.increaseRate}}%</span><span *ngIf="stock.increaseRate <= 0" class="green">{{stock.increaseRate}}%</span>
-        市值：{{stock.marketValue / 100000000}}亿
-        <a routerLink="kline">日K线</a>
-      </p>
-      <button class="btn btn-outline-danger ml-4" (click)="evaluateBuying(stock)">买入评估</button>
-      <button class="btn btn-outline-success ml-3" (click)="evaluateSellout(stock)">卖出评估</button>
-    </mat-list-item>
-  </mat-list>
-</div>
+<mat-list role="list">
+  <mat-list-item *ngFor="let stock of stockList" role="listitem">
+    <div class="mt-3"><span class="font-weight-bold">{{stock.name}}</span> {{stock.code}}
+      价格：<span *ngIf="stock.increaseRate > 0" class="red">{{stock.currentPrice}}</span><span *ngIf="stock.increaseRate <= 0" class="green">{{stock.currentPrice}}</span>
+      涨幅：<span *ngIf="stock.increaseRate > 0" class="red">{{stock.increaseRate}}%</span><span *ngIf="stock.increaseRate <= 0" class="green">{{stock.increaseRate}}%</span>
+      市值：{{stock.marketValue / 100000000}}亿
+      <a routerLink="kline">日K线</a>
+    </div>
+    <a class="btn btn-outline-danger float-right" (click)="evaluateBuying(stock)">买入评估</a>
+    <a class="btn btn-outline-success float-right" (click)="evaluateSellout(stock)">卖出评估</a>
+  </mat-list-item>
+</mat-list>
 
