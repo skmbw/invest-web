@@ -17,15 +17,15 @@
       </mat-form-field>
 
       <mat-form-field class="col-md-6">
-        <input matInput placeholder="买入股数" type="number" [(ngModel)]="invest.shareNumber" name="shareNumber" #shareNumber="ngModel" required>
+        <input matInput placeholder="买入股数" type="number" [(ngModel)]="invest.shareNumber" (ngModelChange)="change($event)" name="shareNumber" #shareNumber="ngModel" required>
       </mat-form-field>
 
       <mat-form-field class="col-md-6">
-        <input matInput placeholder="成交金额" type="number" [(ngModel)]="invest.amount" name="amount" #amount="ngModel" readonly>
+        <input matInput placeholder="成交金额" type="number" [(ngModel)]="invest.amount" name="amount" readonly>
       </mat-form-field>
 
       <mat-form-field class="col-md-6">
-        <input matInput placeholder="交易成本" type="number" [(ngModel)]="invest.cost" name="cost" #cost="ngModel" readonly>
+        <input matInput placeholder="交易成本" type="number" [(ngModel)]="invest.cost" name="cost" readonly>
       </mat-form-field>
 
       <mat-form-field class="col-md-6">
@@ -33,14 +33,15 @@
       </mat-form-field>
 
       <mat-form-field class="col-md-6">
-        <input matInput placeholder="每股成本" type="text">
+        <input matInput placeholder="每股成本" type="text" [(ngModel)]="costPerShare" name="costPerShare" readonly>
       </mat-form-field>
     </div>
 
     <div class="row mt-md-4">
       <div class="col-md-12">
         <button type="button" mat-dialog-close class="col-md-2 col-sm-12 mb-2 btn btn-outline-success mr-2 offset-lg-4 offset-md-4">取 消</button>
-        <button type="submit" class="col-md-2 col-sm-12 mb-2 btn btn-success">{{title}}</button>
+        <button type="submit" class="col-md-2 col-sm-12 mb-2 btn btn-danger" *ngIf="title === '买入'">{{title}}</button>
+        <button type="submit" class="col-md-2 col-sm-12 mb-2 btn btn-success" *ngIf="title === '卖出'">{{title}}</button>
       </div>
     </div>
   </form>

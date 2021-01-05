@@ -15,6 +15,7 @@ export class TransferComponent implements OnInit {
   title = '买入';
   invest: Invest = new Invest();
   stockList: Stock[] = [];
+  costPerShare = '0';
 
   constructor(private matDialogRef: MatDialogRef<TransferComponent>, @Inject(MAT_DIALOG_DATA) public data: Invest,
               private investService: InvestService, private toastr: ToastrService,
@@ -68,6 +69,23 @@ export class TransferComponent implements OnInit {
         this.invest.code = stock.code;
         break;
       }
+    }
+  }
+  change(event: any) {
+    const shareNumber = event as number;
+    if (this.invest.price != null && this.invest.price > 0) {
+      // 成交额
+      const amount = shareNumber * this.invest.price;
+      // 成本价
+      const costPrice = this.invest.price * 1.0025;
+      // 每股成本
+      const costPerShare = costPrice - this.invest.price;
+      this.costPerShare = costPerShare.toFixed(3);
+      // 交易成本
+      const cost = costPerShare * shareNumber;
+      this.invest.amount = Number(amount.toFixed(2));
+      this.invest.costPrice = Number(costPrice.toFixed(2));
+      this.invest.cost = Number(cost.toFixed(2));
     }
   }
 }
