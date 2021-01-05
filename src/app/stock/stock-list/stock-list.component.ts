@@ -16,8 +16,8 @@ export class StockListComponent implements OnInit {
   stockList: Stock[] = [];
   displayedColumns: string[][] = [['name', '股票名称'],
     ['code', '股票代码'], ['currentPrice', '价格'],
-    ['increaseRate', '涨幅'], ['marketValue', '市值（亿）']];
-  dataColumns = ['name', 'code', 'currentPrice', 'increaseRate', 'marketValue'];
+    ['increaseRate', '涨幅'], ['marketValue', '市值（亿）'], ['operate', '操作']];
+  dataColumns = ['name', 'code', 'currentPrice', 'increaseRate', 'marketValue', 'operate'];
 
   constructor(private stockService: StockService, private investService: InvestService,
               private dialog: MatDialog, private toastrService: ToastrService) {

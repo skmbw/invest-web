@@ -54,6 +54,9 @@
       <span *ngIf="column[0] === 'marketValue'">
         <span>{{element[column[0]] / 100000000 | number:'1.2-2'}}</span>
       </span>
+      <span *ngIf="column[0] === 'operate'">
+        <span class="red font-weight-bold hand">买入评估</span><span class="green font-weight-bold ml-2 hand">卖出评估</span>
+      </span>
     </td>
   </ng-container>
   <tr mat-header-row *matHeaderRowDef="dataColumns"></tr>

@@ -69,3 +69,7 @@
 .green {
   color: green;
 }
+
+.hand {
+  cursor: pointer;
+}
