@@ -34,9 +34,12 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class StockListComponent implements OnInit {
   stockList: Stock[] = [];
-  displayedColumns: string[] = ['name', 'code', 'currentPrice', 'increaseRate'];
+  displayedColumns: string[][] = [['name', '股票名称'],
+    ['code', '股票代码'], ['currentPrice', '价格'],
+    ['increaseRate', '涨幅'], ['marketValue', '市值']];
   chineseColumnsToDisplay: string[] = ['股票名称', '股票代码', '价格', '涨幅'];
-  columnsToDisplay: string[] = this.displayedColumns.slice();
+  // columnsToDisplay: string[] = this.displayedColumns.slice();
+  dataColumns = ['name', 'code', 'currentPrice', 'increaseRate', 'marketValue'];
   // displayedColumns: string[] = this.columnsToDisplay.slice();
   data: PeriodicElement[] = ELEMENT_DATA;
   constructor(private stockService: StockService, private investService: InvestService,
