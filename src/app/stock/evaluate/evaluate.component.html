@@ -2,7 +2,7 @@
 <mat-divider></mat-divider>
 <div class="row col-12">
   <div class="row col-12 mt-2" *ngFor="let ruleBean of data.ruleResultList; let idx = index;">
-    <div class="col-10">{{ruleBean.rulerDescription}}</div>
+    <div class="col-10">{{ruleBean.strict}} {{ruleBean.rulerDescription}}</div>
     <div class="col-2">
       <span style="color: green;" *ngIf="ruleBean.result === 'PASS'">通过</span>
       <span style="color: red;" *ngIf="ruleBean.result === 'NOT_PASS'">未通过</span>

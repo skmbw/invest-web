@@ -3,4 +3,5 @@ export class MatchRuleBean {
   rulerDescription: string; // 规则描述
   result: string; // 结果是否通过
   resultDetail: string; // 详情意见
+  strict: boolean; // 严格规则
 }
