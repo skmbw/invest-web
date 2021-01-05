@@ -6,6 +6,7 @@ import {EvaluateComponent} from './evaluate/evaluate.component';
 import {MatDividerModule} from '@angular/material/divider';
 import {RouterModule} from '@angular/router';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatTableModule} from '@angular/material/table';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatListModule,
     MatDividerModule,
     RouterModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTableModule
   ]
 })
 export class StockModule {
