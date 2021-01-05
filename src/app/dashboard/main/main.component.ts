@@ -30,7 +30,7 @@ export class MainComponent implements OnInit {
     this.dialog.open(TransferComponent, {
       width: '650px',
       height: '500px',
-      data: {}
+      data: {state: 1}
     });
   }
 
@@ -38,7 +38,7 @@ export class MainComponent implements OnInit {
     this.dialog.open(TransferComponent, {
       width: '650px',
       height: '500px',
-      data: {}
+      data: {state: 2}
     });
   }
 }

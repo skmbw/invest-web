@@ -1,1 +1,48 @@
-<p>transfer works!</p>
+<div class="container">
+  <form (ngSubmit)="transfer()">
+    <div class="row mt-md-4">
+      <h2 class="col-md-12 text-md-center">{{title}}</h2>
+      <mat-form-field class="col-md-6">
+        <mat-select placeholder="股票名称" [(value)]="invest.name" (valueChange)="stockNameChange($event)">
+          <mat-option *ngFor="let st of stockList" [value]="st.name">{{st.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="col-md-6">
+        <input matInput placeholder="股票代码" type="text" [(ngModel)]="invest.code" name="code" #code="ngModel" required readonly>
+      </mat-form-field>
+
+      <mat-form-field class="col-md-6">
+        <input matInput placeholder="买入价格" type="number" [(ngModel)]="invest.price" name="price" #price="ngModel" required>
+      </mat-form-field>
+
+      <mat-form-field class="col-md-6">
+        <input matInput placeholder="买入股数" type="number" [(ngModel)]="invest.shareNumber" name="shareNumber" #shareNumber="ngModel" required>
+      </mat-form-field>
+
+      <mat-form-field class="col-md-6">
+        <input matInput placeholder="成交金额" type="number" [(ngModel)]="invest.amount" name="amount" #amount="ngModel" readonly>
+      </mat-form-field>
+
+      <mat-form-field class="col-md-6">
+        <input matInput placeholder="交易成本" type="number" [(ngModel)]="invest.cost" name="cost" #cost="ngModel" readonly>
+      </mat-form-field>
+
+      <mat-form-field class="col-md-6">
+        <input matInput placeholder="成本价" type="number" [(ngModel)]="invest.costPrice" name="costPrice" #costPrice="ngModel" readonly>
+      </mat-form-field>
+
+      <mat-form-field class="col-md-6">
+        <input matInput placeholder="每股成本" type="text">
+      </mat-form-field>
+    </div>
+
+    <div class="row mt-md-4">
+      <div class="col-md-12">
+        <button type="button" mat-dialog-close class="col-md-2 col-sm-12 mb-2 btn btn-outline-success mr-2 offset-lg-4 offset-md-4">取 消</button>
+        <button type="submit" class="col-md-2 col-sm-12 mb-2 btn btn-success">{{title}}</button>
+      </div>
+    </div>
+  </form>
+</div>
+

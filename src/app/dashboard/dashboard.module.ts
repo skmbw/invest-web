@@ -6,16 +6,27 @@ import {InvestModule} from '../invest/invest.module';
 import {StockModule} from '../stock/stock.module';
 import {MatCardModule} from '@angular/material/card';
 import {TransferComponent} from './transfer/transfer.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
   declarations: [MainComponent, TransferComponent],
-    imports: [
-        CommonModule,
-        MatTabsModule,
-        InvestModule,
-        StockModule,
-        MatCardModule
-    ]
+  imports: [
+    CommonModule,
+    MatTabsModule,
+    InvestModule,
+    StockModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatDialogModule,
+    MatSelectModule
+  ]
 })
 export class DashboardModule { }
