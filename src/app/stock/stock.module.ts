@@ -4,6 +4,7 @@ import {StockListComponent} from './stock-list/stock-list.component';
 import {MatListModule} from '@angular/material/list';
 import {EvaluateComponent} from './evaluate/evaluate.component';
 import {MatDividerModule} from '@angular/material/divider';
+import {RouterModule} from '@angular/router';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import {MatDividerModule} from '@angular/material/divider';
   imports: [
     CommonModule,
     MatListModule,
-    MatDividerModule
+    MatDividerModule,
+    RouterModule
   ]
 })
 export class StockModule {

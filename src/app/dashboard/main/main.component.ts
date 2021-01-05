@@ -23,4 +23,9 @@ export class MainComponent implements OnInit {
     });
   }
 
+  buying() {
+  }
+
+  sellout() {
+  }
 }
