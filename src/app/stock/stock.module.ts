@@ -20,7 +20,7 @@ import {MatTableModule} from '@angular/material/table';
     MatDividerModule,
     RouterModule,
     MatDialogModule,
-    MatTableModule
+    MatTableModule,
   ]
 })
 export class StockModule {
