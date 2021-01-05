@@ -5,10 +5,11 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {InvestModule} from '../invest/invest.module';
 import {StockModule} from '../stock/stock.module';
 import {MatCardModule} from '@angular/material/card';
+import {TransferComponent} from './transfer/transfer.component';
 
 
 @NgModule({
-  declarations: [MainComponent],
+  declarations: [MainComponent, TransferComponent],
     imports: [
         CommonModule,
         MatTabsModule,
