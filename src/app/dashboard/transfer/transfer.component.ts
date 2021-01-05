@@ -43,7 +43,7 @@ export class TransferComponent implements OnInit {
       this.toastr.success('股票名称不能为空。');
       return;
     }
-    const shareNumber = this.invest.shareNumber;
+    const shareNumber = this.invest.sharesNumber;
     if (shareNumber % 100 !== 0) {
       this.toastr.success('买入股票数必须是100股（1手）的整数倍。');
       return;
@@ -56,6 +56,8 @@ export class TransferComponent implements OnInit {
     this.investService.add(this.invest).subscribe(result => {
       if (result.code === 1) {
         this.toastr.success(this.title + '交易成功');
+        this.invest = new Invest(); // clear
+        this.matDialogRef.close(); // 关闭对话框
       } else {
         this.toastr.success(result.message);
       }
@@ -71,6 +73,7 @@ export class TransferComponent implements OnInit {
       }
     }
   }
+
   change(event: any) {
     const shareNumber = event as number;
     if (this.invest.price != null && this.invest.price > 0) {

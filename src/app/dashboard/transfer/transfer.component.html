@@ -13,11 +13,11 @@
       </mat-form-field>
 
       <mat-form-field class="col-md-6">
-        <input matInput placeholder="买入价格" type="number" [(ngModel)]="invest.price" name="price" #price="ngModel" required>
+        <input matInput placeholder="{{title}}价格" type="number" [(ngModel)]="invest.price" name="price" #price="ngModel" required>
       </mat-form-field>
 
       <mat-form-field class="col-md-6">
-        <input matInput placeholder="买入股数" type="number" [(ngModel)]="invest.shareNumber" (ngModelChange)="change($event)" name="shareNumber" #shareNumber="ngModel" required>
+        <input matInput placeholder="{{title}}股数" type="number" [(ngModel)]="invest.sharesNumber" (ngModelChange)="change($event)" name="sharesNumber" required>
       </mat-form-field>
 
       <mat-form-field class="col-md-6">

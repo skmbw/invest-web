@@ -6,7 +6,7 @@ export class Invest {
   name: string;
   code: string;
   price: number;
-  shareNumber: number;
+  sharesNumber: number;
   amount: number;
   costPrice: number;
   buyTime: string;
