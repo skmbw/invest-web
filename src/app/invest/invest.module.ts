@@ -3,6 +3,7 @@ import {CommonModule} from '@angular/common';
 import {HoldingListComponent} from './holding-list/holding-list.component';
 import {ClearanceListComponent} from './clearance-list/clearance-list.component';
 import {InvestListComponent} from './invest-list/invest-list.component';
+import {MatTableModule} from '@angular/material/table';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import {InvestListComponent} from './invest-list/invest-list.component';
     InvestListComponent
   ],
     imports: [
-        CommonModule
+        CommonModule,
+        MatTableModule
     ]
 })
 export class InvestModule { }

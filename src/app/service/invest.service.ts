@@ -26,7 +26,7 @@ export class InvestService {
     return this.httpClient.post<JsonBean>(environment.host + 'invest/doAdd', invest);
   }
 
-  list(): Observable<JsonBean> {
-    return this.httpClient.post<JsonBean>(environment.host + 'invest/list', {});
+  list(invest: Invest): Observable<JsonBean> {
+    return this.httpClient.post<JsonBean>(environment.host + 'invest/list', invest);
   }
 }

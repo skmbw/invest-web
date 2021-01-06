@@ -10,12 +10,15 @@ import {Invest} from '../../bean/invest';
 })
 export class HoldingListComponent implements OnInit {
   investList: Invest[] = [];
+  dataColumns = ['name', 'code', 'price', 'sharesNumber', 'amount', 'operate'];
 
   constructor(private investService: InvestService, private toastrService: ToastrService) {
   }
 
   ngOnInit(): void {
-    this.investService.list().subscribe(result => {
+    const invest = new Invest();
+    invest.state = 1;
+    this.investService.list(invest).subscribe(result => {
       if (result.code === 1) {
         this.investList = result.data as Invest[];
       } else {

@@ -2,10 +2,6 @@ table {
   width: 100%;
 }
 
-button {
-  margin: 16px 8px;
-}
-
 tr:hover {
   background: #f5f5f5;
 }
