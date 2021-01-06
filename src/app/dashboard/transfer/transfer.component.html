@@ -35,6 +35,10 @@
       <mat-form-field class="col-md-6">
         <input matInput placeholder="每股成本" type="text" [(ngModel)]="costPerShare" name="costPerShare" readonly>
       </mat-form-field>
+
+      <mat-form-field class="col-md-6">
+        <input matInput placeholder="交易时间" type="datetime-local" [(ngModel)]="invest.transferDate" name="transferDate">
+      </mat-form-field>
     </div>
 
     <div class="row mt-md-4">

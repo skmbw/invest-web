@@ -16,12 +16,12 @@
   </ng-container>
 
   <ng-container matColumnDef="backup">
-    <th mat-header-cell *matHeaderCellDef> 现价 </th>
+    <th mat-header-cell *matHeaderCellDef> <span class="red font-weight-bold">现价</span> </th>
     <td mat-cell *matCellDef="let element"> {{element.backup}} </td>
   </ng-container>
 
   <ng-container matColumnDef="increaseRate">
-    <th mat-header-cell *matHeaderCellDef> 涨幅 </th>
+    <th mat-header-cell *matHeaderCellDef> <span class="red font-weight-bold">涨幅</span> </th>
     <td mat-cell *matCellDef="let element">
       <span *ngIf="element.remark > 0" class="red font-weight-bold">{{element.remark | number: '1.2-2'}}%</span>
       <span *ngIf="element.remark <= 0" class="green font-weight-bold">{{element.remark | number: '1.2-2'}}%</span>
@@ -30,7 +30,7 @@
 
   <ng-container matColumnDef="sharesNumber">
     <th mat-header-cell *matHeaderCellDef> 持股数 </th>
-    <td mat-cell *matCellDef="let element"> {{element.sharesNumber}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.sharesNumber - element.selloutVolume}} </td>
   </ng-container>
 
   <ng-container matColumnDef="amount">

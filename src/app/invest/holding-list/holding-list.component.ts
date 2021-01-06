@@ -34,7 +34,7 @@ export class HoldingListComponent implements OnInit {
     invest.state = 2;
     this.dialog.open(TransferComponent, {
       width: '650px',
-      height: '500px',
+      height: '600px',
       data: invest
     });
   }

@@ -29,7 +29,7 @@ export class MainComponent implements OnInit {
   buying() {
     this.dialog.open(TransferComponent, {
       width: '650px',
-      height: '500px',
+      height: '600px',
       data: {state: 1}
     });
   }
