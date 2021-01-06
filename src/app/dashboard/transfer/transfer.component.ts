@@ -58,7 +58,7 @@ export class TransferComponent implements OnInit {
     }
     this.invest.state = this.data.state; // 1买入、2卖出
     const transferDate = this.invest.transferDate;
-    this.invest.transferDate = transferDate.replace('T', ' ');
+    this.invest.transferDate = transferDate.replace('T', ' ') + ':00';
     if (this.invest.state === 1) {
       this.investService.buying(this.invest).subscribe(result => {
         if (result.code === 1) {
