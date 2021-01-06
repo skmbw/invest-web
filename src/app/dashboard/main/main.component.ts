@@ -33,12 +33,4 @@ export class MainComponent implements OnInit {
       data: {state: 1}
     });
   }
-
-  sellout() {
-    this.dialog.open(TransferComponent, {
-      width: '650px',
-      height: '500px',
-      data: {state: 2}
-    });
-  }
 }

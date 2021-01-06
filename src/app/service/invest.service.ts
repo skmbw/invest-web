@@ -15,15 +15,19 @@ export class InvestService {
   }
 
   evaluateBuying(stock: Stock): Observable<JsonBean> {
-    return this.httpClient.post<JsonBean>(environment.host + 'invest/buying', stock);
+    return this.httpClient.post<JsonBean>(environment.host + 'invest/evaluateBuying', stock);
   }
 
   evaluateSellout(stock: Stock): Observable<JsonBean> {
-    return this.httpClient.post<JsonBean>(environment.host + 'invest/sellout', stock);
+    return this.httpClient.post<JsonBean>(environment.host + 'invest/evaluateSellout', stock);
   }
 
-  add(invest: Invest): Observable<JsonBean> {
-    return this.httpClient.post<JsonBean>(environment.host + 'invest/doAdd', invest);
+  buying(invest: Invest): Observable<JsonBean> {
+    return this.httpClient.post<JsonBean>(environment.host + 'invest/buying', invest);
+  }
+
+  sellout(invest: Invest): Observable<JsonBean> {
+    return this.httpClient.post<JsonBean>(environment.host + 'invest/sellout', invest);
   }
 
   list(invest: Invest): Observable<JsonBean> {

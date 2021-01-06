@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {InvestService} from '../../service/invest.service';
 import {ToastrService} from 'ngx-toastr';
 import {Invest} from '../../bean/invest';
+import {TransferComponent} from '../../dashboard/transfer/transfer.component';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-holding-list',
@@ -12,7 +14,8 @@ export class HoldingListComponent implements OnInit {
   investList: Invest[] = [];
   dataColumns = ['name', 'code', 'price', 'sharesNumber', 'amount', 'operate'];
 
-  constructor(private investService: InvestService, private toastrService: ToastrService) {
+  constructor(private investService: InvestService, private toastrService: ToastrService,
+              private dialog: MatDialog) {
   }
 
   ngOnInit(): void {
@@ -27,4 +30,12 @@ export class HoldingListComponent implements OnInit {
     });
   }
 
+  sellout(invest: Invest) {
+    invest.state = 2;
+    this.dialog.open(TransferComponent, {
+      width: '650px',
+      height: '500px',
+      data: invest
+    });
+  }
 }

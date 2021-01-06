@@ -54,15 +54,27 @@ export class TransferComponent implements OnInit {
       return;
     }
     this.invest.state = this.data.state; // 1买入、2卖出
-    this.investService.add(this.invest).subscribe(result => {
-      if (result.code === 1) {
-        this.toastr.success(this.title + '交易成功');
-        this.invest = new Invest(); // clear
-        this.matDialogRef.close(); // 关闭对话框
-      } else {
-        this.toastr.success(result.message);
-      }
-    });
+    if (this.invest.state === 1) {
+      this.investService.buying(this.invest).subscribe(result => {
+        if (result.code === 1) {
+          this.toastr.success(this.title + '交易成功');
+          this.invest = new Invest(); // clear
+          this.matDialogRef.close(); // 关闭对话框
+        } else {
+          this.toastr.success(result.message);
+        }
+      });
+    } else if (this.invest.state === 2) {
+      this.investService.sellout(this.invest).subscribe(result => {
+        if (result.code === 1) {
+          this.toastr.success(this.title + '交易成功');
+          this.invest = new Invest();
+          this.matDialogRef.close();
+        } else {
+          this.toastr.success(result.message);
+        }
+      });
+    }
   }
 
   stockNameChange(event: any) {
