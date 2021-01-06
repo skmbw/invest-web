@@ -10,7 +10,7 @@ import {Invest} from '../../bean/invest';
 })
 export class ClearanceListComponent implements OnInit {
   investList: Invest[] = [];
-  dataColumns = ['name', 'code', 'selloutPrice', 'sharesNumber', 'selloutAmount', 'profit', 'operate'];
+  dataColumns = ['name', 'code', 'price', 'selloutPrice', 'sharesNumber', 'selloutAmount', 'profit', 'operate'];
 
   constructor(private investService: InvestService, private toastr: ToastrService) {
   }

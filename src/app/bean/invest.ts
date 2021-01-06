@@ -19,4 +19,8 @@ export class Invest {
   selloutPrice: number;
   selloutVolume: number;
   selloutAmount: number;
+  refBuyingId: string;
+  backup: string;
+  remark: string;
+  clearance: number;
 }

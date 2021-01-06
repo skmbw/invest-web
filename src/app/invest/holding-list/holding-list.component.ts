@@ -12,7 +12,7 @@ import {MatDialog} from '@angular/material/dialog';
 })
 export class HoldingListComponent implements OnInit {
   investList: Invest[] = [];
-  dataColumns = ['name', 'code', 'price', 'sharesNumber', 'amount', 'operate'];
+  dataColumns = ['name', 'code', 'price', 'backup', 'increaseRate', 'sharesNumber', 'amount', 'profit', 'operate'];
 
   constructor(private investService: InvestService, private toastrService: ToastrService,
               private dialog: MatDialog) {
