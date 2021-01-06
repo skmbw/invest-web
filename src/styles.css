@@ -77,3 +77,7 @@
 .hand {
   cursor: pointer;
 }
+
+table {
+  width: 100%;
+}

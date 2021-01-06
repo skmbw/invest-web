@@ -25,6 +25,9 @@ export class TransferComponent implements OnInit {
     } else if (this.data.state === 2) {
       this.title = '卖出';
     }
+    this.invest.id = this.data.id;
+    this.invest.name = data.name;
+    this.invest.code = data.code;
   }
 
   ngOnInit(): void {
