@@ -28,3 +28,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 # mat-divider不显示
 * 不显示，是因为没有给它设置长度，添加class或者style设置长度就好了
+
+# is overridden here in MatColumnDef as an instance property
+* 这个错误在@angular/material/table/cell.d.ts 里面
+* 属性name重载了父类的getName和setName方法，导致错误。从属性访问器->实例属性

@@ -53,6 +53,7 @@ export class TransferComponent implements OnInit {
       this.toastr.success('买入价格必须大于0。');
       return;
     }
+    this.invest.state = this.data.state; // 1买入、2卖出
     this.investService.add(this.invest).subscribe(result => {
       if (result.code === 1) {
         this.toastr.success(this.title + '交易成功');
