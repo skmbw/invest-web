@@ -12,4 +12,9 @@ export class Account {
   remark: string;
   capitalTransferIn: number;
   capitalTransferOut: number;
+  currency: number;
+  stockAssets: number;
+  profitRate: number;
+  account: string;
+  updateDate: string;
 }

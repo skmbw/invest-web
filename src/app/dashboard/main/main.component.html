@@ -33,16 +33,16 @@
         <div class="row mb-2">
           <div class="col-md-4">
             <b class="font-size-lg">现金总额：</b>
-            <span class="primary-color">{{account.capital}}</span>
+            <span class="primary-color">{{account.currency}}</span>
           </div>
           <div class="col-md-4">
             <b class="font-size-lg">股票净值：</b>
-            <span class="primary-color">{{account.profit}}</span>
+            <span class="primary-color">{{account.stockAssets | number: '1.2-2'}}</span>
           </div>
           <div class="col-md-4">
             <b class="font-size-lg">收益率：</b>
             <!--小数点后整数位数（默认1位）.小数点后最小位数-小数点后最大位数-->
-            <span class="primary-color">{{account.profit / account.capital * 100 | number: '1.2-2'}}%</span>
+            <span class="primary-color">{{account.profitRate | number: '1.2-2'}}%</span>
           </div>
         </div>
       </mat-card-content>
