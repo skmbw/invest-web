@@ -6,6 +6,7 @@ import {MatDialog} from '@angular/material/dialog';
 import {EvaluateComponent} from '../evaluate/evaluate.component';
 import {ToastrService} from 'ngx-toastr';
 import {EvaluationResult} from '../../bean/evaluation.result';
+import {TransferComponent} from '../../dashboard/transfer/transfer.component';
 
 @Component({
   selector: 'app-stock-list',
@@ -60,6 +61,14 @@ export class StockListComponent implements OnInit {
       } else {
         this.toastrService.success(result.message);
       }
+    });
+  }
+
+  buying(stock: Stock) {
+    this.dialog.open(TransferComponent, {
+      width: '650px',
+      height: '600px',
+      data: {code: stock.code, name: stock.name, state: 1}
     });
   }
 }
