@@ -9,9 +9,10 @@
       </mat-form-field>
 
       <mat-form-field class="col-md-12 mt-4">
-        <input matInput placeholder="资金" type="number" [(ngModel)]="account.capital" name="capital" #capital="ngModel" required>
+        <input matInput placeholder="资金" type="number" [(ngModel)]="account.capital" (ngModelChange)="amountChange($event)" name="capital" #capital="ngModel" required>
       </mat-form-field>
 
+      <span class="ml-3">{{capitalAmountString}}</span>
     </div>
 
     <div class="row mt-md-4">

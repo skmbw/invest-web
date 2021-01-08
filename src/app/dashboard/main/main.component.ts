@@ -26,16 +26,16 @@ export class MainComponent implements OnInit {
 
   transferIn() {
     this.dialog.open(CapitalInoutComponent, {
-      width: '650px',
-      height: '600px',
+      width: '600px',
+      height: '500px',
       data: {state: 1}
     });
   }
 
   transferOut() {
     this.dialog.open(CapitalInoutComponent, {
-      width: '650px',
-      height: '600px',
+      width: '600px',
+      height: '500px',
       data: {state: 2}
     });
   }
