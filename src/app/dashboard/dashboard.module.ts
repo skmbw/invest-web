@@ -11,10 +11,11 @@ import {MatInputModule} from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatSelectModule} from '@angular/material/select';
+import {CapitalInoutComponent} from './capital-inout/capital-inout.component';
 
 
 @NgModule({
-  declarations: [MainComponent, TransferComponent],
+  declarations: [MainComponent, TransferComponent, CapitalInoutComponent],
   imports: [
     CommonModule,
     MatTabsModule,
