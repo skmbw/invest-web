@@ -21,6 +21,9 @@ export class AccountService {
     let url = 'stockAccount/transferIn';
     if (account.state === 2) {
       url = 'stockAccount/transferOut';
+      account.capitalTransferOut = account.capital;
+    } else {
+      account.capitalTransferIn = account.capital;
     }
     return this.httpClient.post<JsonBean>(environment.host + url, account);
   }
