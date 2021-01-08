@@ -1,1 +1,25 @@
-<p>capital-inout works!</p>
+<div class="container">
+  <form (ngSubmit)="transfer()">
+    <div class="row mt-md-4">
+      <h2 class="col-md-12 text-md-center">资金{{title}}</h2>
+      <mat-form-field class="col-md-12 mt-4">
+        <mat-select placeholder="操作类型" [(value)]="account.state">
+          <mat-option *ngFor="let st of operateList" [value]="st.state">{{st.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="col-md-12 mt-4">
+        <input matInput placeholder="资金" type="number" [(ngModel)]="account.capital" name="capital" #capital="ngModel" required>
+      </mat-form-field>
+
+    </div>
+
+    <div class="row mt-md-4">
+      <div class="col-md-12">
+        <button type="button" mat-dialog-close class="col-md-2 col-sm-12 mb-2 btn btn-outline-success mr-2 offset-lg-4 offset-md-4">取 消</button>
+        <button type="submit" class="col-md-2 col-sm-12 mb-2 btn btn-danger">{{title}}</button>
+      </div>
+    </div>
+  </form>
+</div>
+
