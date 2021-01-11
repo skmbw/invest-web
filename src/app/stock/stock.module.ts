@@ -7,10 +7,12 @@ import {MatDividerModule} from '@angular/material/divider';
 import {RouterModule} from '@angular/router';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatTableModule} from '@angular/material/table';
+import {KlineComponent} from './kline/kline.component';
+import {MatTabsModule} from '@angular/material/tabs';
 
 
 @NgModule({
-  declarations: [StockListComponent, EvaluateComponent],
+  declarations: [StockListComponent, EvaluateComponent, KlineComponent],
   exports: [
     StockListComponent
   ],
@@ -21,6 +23,7 @@ import {MatTableModule} from '@angular/material/table';
     RouterModule,
     MatDialogModule,
     MatTableModule,
+    MatTabsModule,
   ]
 })
 export class StockModule {

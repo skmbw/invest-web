@@ -7,6 +7,7 @@ import {EvaluateComponent} from '../evaluate/evaluate.component';
 import {ToastrService} from 'ngx-toastr';
 import {EvaluationResult} from '../../bean/evaluation.result';
 import {TransferComponent} from '../../dashboard/transfer/transfer.component';
+import {KlineComponent} from '../kline/kline.component';
 
 @Component({
   selector: 'app-stock-list',
@@ -69,6 +70,14 @@ export class StockListComponent implements OnInit {
       width: '650px',
       height: '600px',
       data: {code: stock.code, name: stock.name, state: 1}
+    });
+  }
+
+  dayKline(stock: Stock) {
+    this.dialog.open(KlineComponent, {
+      width: '750px',
+      height: '600px',
+      data: stock
     });
   }
 }

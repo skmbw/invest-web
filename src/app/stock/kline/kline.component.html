@@ -1,0 +1,22 @@
+<div class="container">
+  <h2 class="text-center">{{name}}K线图</h2>
+  <mat-tab-group class="mt-4">
+    <mat-tab label="分时线">
+      <img src="http://image.sinajs.cn/newchart/min/n/sh{{code}}.gif">
+    </mat-tab>
+    <mat-tab label="日K线">
+      <img src="http://image.sinajs.cn/newchart/daily/n/sh{{code}}.gif">
+    </mat-tab>
+    <mat-tab label="周K线">
+      <img src="http://image.sinajs.cn/newchart/weekly/n/sh{{code}}.gif">
+    </mat-tab>
+    <mat-tab label="月K线">
+      <img src="http://image.sinajs.cn/newchart/monthly/n/sh{{code}}.gif">
+    </mat-tab>
+    <mat-tab label="大盘指数">
+      <img src="http://image.sinajs.cn/newchart/daily/n/sh000001.gif">
+    </mat-tab>
+  </mat-tab-group>
+
+  <button type="button" mat-dialog-close class="col-md-2 col-sm-12 btn btn-outline-danger mt-4 offset-lg-5 offset-md-5">确 定</button>
+</div>
