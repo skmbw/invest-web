@@ -13,8 +13,8 @@
         <span *ngIf="element.increaseRate <= 0" class="green">{{element[column[0]] | number:'1.2-2'}}</span>
       </span>
       <span *ngIf="column[0] === 'increaseRate'">
-        <span *ngIf="element.increaseRate > 0" class="red">{{element[column[0]] | number:'1.2-2'}}%</span>
-        <span *ngIf="element.increaseRate <= 0" class="green">{{element[column[0]] | number:'1.2-2'}}%</span>
+        <span *ngIf="element.increaseRate > 0" class="red font-weight-bold">{{element[column[0]] | number:'1.2-2'}}%</span>
+        <span *ngIf="element.increaseRate <= 0" class="green font-weight-bold">{{element[column[0]] | number:'1.2-2'}}%</span>
       </span>
       <span *ngIf="column[0] === 'marketValue'">
         <span>{{element[column[0]] / 100000000 | number:'1.2-2'}}</span>
