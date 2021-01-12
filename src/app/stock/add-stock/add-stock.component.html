@@ -1,0 +1,30 @@
+<div class="container">
+  <form (ngSubmit)="add()">
+    <div class="row mt-md-4">
+      <h2 class="col-md-12 text-md-center">新增自选股票</h2>
+      <mat-form-field class="col-md-6">
+        <input matInput placeholder="股票名称" type="text" [(ngModel)]="stock.name" name="name" #name="ngModel" required>
+      </mat-form-field>
+
+      <mat-form-field class="col-md-6">
+        <input matInput placeholder="股票代码" type="text" [(ngModel)]="stock.code" name="code" #code="ngModel" required>
+      </mat-form-field>
+
+      <mat-form-field class="col-md-6">
+        <input matInput placeholder="股票简称" type="text" [(ngModel)]="stock.alphaCode" name="alphaCode" #alphaCode="ngModel" required>
+      </mat-form-field>
+
+      <mat-form-field class="col-md-6">
+        <input matInput placeholder="现价" type="number" [(ngModel)]="stock.currentPrice" name="currentPrice" required>
+      </mat-form-field>
+
+    </div>
+
+    <div class="row mt-md-4">
+      <div class="col-md-12">
+        <button type="button" mat-dialog-close class="col-md-2 col-sm-12 mb-2 btn btn-outline-success mr-2 offset-lg-4 offset-md-4">取 消</button>
+        <button type="submit" class="col-md-2 col-sm-12 mb-2 btn btn-danger">添 加</button>
+      </div>
+    </div>
+  </form>
+</div>

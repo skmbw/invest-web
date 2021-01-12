@@ -8,6 +8,7 @@ import {ToastrService} from 'ngx-toastr';
 import {EvaluationResult} from '../../bean/evaluation.result';
 import {TransferComponent} from '../../dashboard/transfer/transfer.component';
 import {KlineComponent} from '../kline/kline.component';
+import {AddStockComponent} from '../add-stock/add-stock.component';
 
 @Component({
   selector: 'app-stock-list',
@@ -78,6 +79,14 @@ export class StockListComponent implements OnInit {
       width: '750px',
       height: '600px',
       data: stock
+    });
+  }
+
+  addStock() {
+    this.dialog.open(AddStockComponent, {
+      width: '650px',
+      height: '650px',
+      data: {}
     });
   }
 }

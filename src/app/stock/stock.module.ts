@@ -9,10 +9,15 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatTableModule} from '@angular/material/table';
 import {KlineComponent} from './kline/kline.component';
 import {MatTabsModule} from '@angular/material/tabs';
+import {AddStockComponent} from './add-stock/add-stock.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import {MatInputModule} from '@angular/material/input';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
-  declarations: [StockListComponent, EvaluateComponent, KlineComponent],
+  declarations: [StockListComponent, EvaluateComponent, KlineComponent, AddStockComponent],
   exports: [
     StockListComponent
   ],
@@ -24,6 +29,10 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatDialogModule,
     MatTableModule,
     MatTabsModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule,
+    FormsModule,
   ]
 })
 export class StockModule {
