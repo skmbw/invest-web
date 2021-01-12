@@ -8,11 +8,15 @@ import {Stock} from '../../bean/stock';
   styleUrls: ['./kline.component.css']
 })
 export class KlineComponent implements OnInit {
-  code = '000001';
+  code = 'sh000001';
   name = '';
 
   constructor(private matDialogRef: MatDialogRef<KlineComponent>, @Inject(MAT_DIALOG_DATA) public data: Stock) {
-    this.code = this.data.code;
+    if (this.data.code.startsWith('0')) {
+      this.code = 'sz' + this.data.code;
+    } else if (this.data.code .startsWith('6')) {
+      this.code = 'sh' + this.data.code;
+    }
     this.name = this.data.name;
   }
 
