@@ -23,4 +23,14 @@ export class Invest {
   backup: string;
   remark: string;
   clearance: number;
+  investList: Invest[];
+}
+
+export class InvestReply {
+  code: number;
+  message: string;
+  name: string;
+  key: string;
+  data: any;
+  investBeanList: Invest[];
 }
