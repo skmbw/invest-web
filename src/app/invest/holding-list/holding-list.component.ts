@@ -19,11 +19,9 @@ export class HoldingListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const invest = new Invest();
-    invest.state = 1;
-    this.investService.list(invest).subscribe(result => {
+    this.investService.holdingList().subscribe(result => {
       if (result.code === 1) {
-        this.investList = result.data as Invest[];
+        this.investList = result.investBeanList as Invest[];
       } else {
         this.toastrService.success(result.message);
       }
