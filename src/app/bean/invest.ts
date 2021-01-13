@@ -24,6 +24,7 @@ export class Invest {
   remark: string;
   clearance: number;
   investList: Invest[];
+  profitRatio: number;
 }
 
 export class InvestReply {
